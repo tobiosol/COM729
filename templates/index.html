@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Ocular Disease Predictor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles can be added here */
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-semibold mb-4">Liver Ocular Disease Predictor</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file" class="block text-gray-700 font-medium mb-2">Upload an image:</label>
+            <input type="file" id="file" name="file" accept=".png, .jpg, .jpeg" class="border rounded-lg p-2 w-full mb-4">
+            
+            <!-- Dropdown menu -->
+            <label for="model" class="block text-gray-700 font-medium mb-2">Select model:</label>
+            <select id="model" name="model" class="border rounded-lg p-2 w-full mb-4">
+                <option value="decision">Decision</option>
+                <option value="cnn">CNN</option>
+            </select>
+            
+            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg w-full hover:bg-blue-600">Predict</button>
+        </form>
+        {% if predicted_class %}
+            <div class="mt-4">
+                <p class="text-gray-700 font-medium">Predicted Disease:</p>
+                <p class="text-xl font-semibold">{{ predicted_class }}</p>
+            </div>
+            <!-- Display performance metrics here (if available) -->
+        {% endif %}
+    </div>
+</body>
+</html>
