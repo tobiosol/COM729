@@ -3,6 +3,22 @@
 
 ## Project Structure
 
+## Dataset
+
+The dataset for this project is provided in a zip file named "processed_dataset.zip". To use the dataset:
+
+1. Extract the contents of "images.zip" into a folder named "images" under the "dataset/v2" parent directory.
+
+2. The directory structure should look like this:
+
+dataset/ └── v2/ └── images/ └── (extracted image files)
+
+
+3. The original dataset file, "original.zip", is also available for further preprocessing if needed.
+
+Please ensure that you have the correct folder structure and extracted images before running the project.
+
+
 ### fundus_v2/
 Main directory containing the core components of the fundus image analysis project.
 

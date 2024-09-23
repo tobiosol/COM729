@@ -171,3 +171,4 @@ cython_debug/
 /timg
 /.venv
 /fundus_v2/__pycache__
+/dataset/v2/images
